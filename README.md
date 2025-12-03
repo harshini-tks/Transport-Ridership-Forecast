@@ -3,6 +3,7 @@ INSIGHTS
 
 
 INTRODUCTION
+
 Public transport ridership forecasting is essential for efficient service planning, vehicle allocation, peak-hour management, and overall operational decision-making.
 This project aims to analyze historical passenger journeys across multiple service types and build a short-term forecasting model capable of predicting ridership for the next 14 days.
 The primary goals of this project are:
@@ -72,6 +73,7 @@ School ridership is highest during regular school months and becomes very low du
 
 
 MODEL - RANDOM FOREST
+
 I selected the Random Forest Regressor because it works extremely well for forecasting multiple correlated time-series when combined with lag and calendar features. Unlike ARIMA or Prophet, Random Forest:
 Can predict all service types together (multi-output forecasting)
 Learns non-linear patterns such as weekday/weekend differences, school seasons, and holiday dips
@@ -82,6 +84,7 @@ Most importantly, Random Forest outperformed the baseline model, reducing MAE by
 Outperformed Naive Baseline by 35–47%
 
 Hyperparameter 
+
 n_estimators=300
 max_depth=12
 min_samples_leaf=5
@@ -91,16 +94,19 @@ n_jobs=-1
 Here is why each parameter was chosen:
 
 n_estimators = 300
+
 Number of trees in the forest.
 More trees → more stable predictions
 After ~300 trees, performance stops significantly improving
 Balanced between accuracy and computation time
 
 max_depth = 12
+
 Maximum depth of each decision tree.
 Deeper trees capture more patterns but may overfit
 
 Depth=12 
+
 gives enough complexity to learn:
 weekday/weekend patterns
 lags
@@ -108,24 +114,27 @@ seasonal effects
 Prevents trees from becoming too complex
 
 min_samples_leaf = 5
+
 Minimum samples required at a leaf node.
 Ensures leaves are not created from very small, noisy samples
 Smooths predictions
 Prevents extreme forecast spikes
 
 random_state = 42
+
 Ensures reproducibility.
 Same model → same output every time
 This is critical for reporting and evaluation
 
 n_jobs = -1
+
 Use all CPU cores.
 Faster training
 Especially useful with large feature sets (lags + calendar features)
 
 
-Conclusion
-Random Forest was chosen because:
+Conclusion:
+
 It models multiple correlated services at once
 It handles nonlinear patterns, spikes, holidays, school terms, and weekly cycles
 It is resistant to noise and outliers
