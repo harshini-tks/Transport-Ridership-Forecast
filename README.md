@@ -1,5 +1,7 @@
 PUBLIC TRANSPORT RIDERSHIP FORECASTING
 INSIGHTS
+
+
 INTRODUCTION
 Public transport ridership forecasting is essential for efficient service planning, vehicle allocation, peak-hour management, and overall operational decision-making.
 This project aims to analyze historical passenger journeys across multiple service types and build a short-term forecasting model capable of predicting ridership for the next 14 days.
@@ -23,6 +25,7 @@ School drops by 67%
 Peak Service drops by 66%
 Local Route drops by 51%
 Rapid Route drops by 39%
+
 Conclusion:
 On weekdays, public transport is used much more because of work and school travel. On weekends, usage falls a lot across all services, especially school and peak services. This shows clear weekly patterns in how people travel.
 
@@ -36,10 +39,12 @@ Year
 2022    29679.000000
 2023    37112.791781
 2024    37979.183150
+
 Interpretation
 Ridership fell ~40–43% during the pandemic (2020–2021).
 2024 ridership is still ~15% lower than 2019 levels.
 Slow but steady recovery is seen from 2022–2024.
+
 Conclusion:
 The number of passengers was highest before COVID, then fell a lot in 2020–2021, and although it has been increasing again, it is still lower than 2019 levels. This shows slow recovery over the years.
 
@@ -55,11 +60,13 @@ Rapid Route is the most-used service across all years. Local Route and Light Rai
 
 INSIGHT 4:
 School Service is Highly Seasonal
+
 Interpretation
 Ridership strongly aligns with school calendars.
 Sharp declines occur during:
 Winter vacation (Dec–Jan)
 Term breaks
+
 Conclusion:
 School ridership is highest during regular school months and becomes very low during holidays. This shows clear seasonal patterns where school breaks heavily reduce passenger numbers.
 
